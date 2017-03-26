@@ -1,0 +1,28 @@
+Aplikace cte xls nebo xlsx soubor a nahrava data do prislusne databaze dle specifikace popsane v config.properties filu a to v pripade, ze pocet sloupcu v prislusnem excel souboru je shodny s poctem sloupcu v databazi.
+
+ukol.jar se spousti prikazem: java -jar ukolFinal.jar [jmeno souboru]
+Jmeno souboru neni povinny arguent, lze pustit pouze prikazem java -jar ukol.jar
+
+Ve slozce, kde je ukol.jar ulozen musi byt obsazen config.properties soubor.
+Dale pak slozka musi obsahovat soubor, ktery je spousten. V opacnem pripade je treba 
+napsat soubor i s cestou napr java -jar ukol.jar ~/Desktop/ukol/test/hm.xls pro Linux
+
+Soubor obsahuje nastaveni pro:
+
+dbpassword [heslo uzivatele obsluhujiciho databazo]
+database= [specifikace databaze]
+dbuser=[jmeno uzivatele]
+logFile=[jmeno souboru, kam se bude ukladat logovani, tento file je pri kazdem behu znovu prepsan]
+
+Dale pak mapovani jmena excel sheetu kdy v pripade mezery v nazvu listu je treba nahradit podtrzitkem v properties filu. Neni treba menit jmeno listu prislusneho listu v excelu.
+
+priklad:
+[nazev listu]=[nazev tabulky]
+
+Pozor!!
+Funguje to pro jakykoli pocet sheetu, ale pozor, pouze, pokud tabulka zacina na prvni nebo druhe rade.
+Pozor!!
+
+
+
+
